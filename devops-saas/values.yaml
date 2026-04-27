@@ -1,0 +1,21 @@
+auth:
+  image: auth-service
+  replicaCount: 1
+
+user:
+  image: user-service
+  replicaCount: 1
+
+order:
+  image: order-service
+  replicaCount: 1
+
+notification:
+  image: notification-service
+  replicaCount: 1
+
+aws:
+  accessKey: ""
+  secretKey: ""
+  region: "ap-south-1"
+  sqsUrl: "https://sqs.us-east-1.amazonaws.com/187038415085/order-queue"
