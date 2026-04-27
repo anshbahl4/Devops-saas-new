@@ -2,8 +2,8 @@ pipeline {
     agent any
 
     environment {
-        AWS_REGION = 'ap-south-1'
-        ECR_URL = '187038415085.dkr.ecr.ap-south-1.amazonaws.com'
+        AWS_REGION = 'us-east-1'
+        ECR_URL = '187038415085.dkr.ecr.us-east-1.amazonaws.com'
         IMAGE_TAG = "${BUILD_NUMBER}"
     }
 
