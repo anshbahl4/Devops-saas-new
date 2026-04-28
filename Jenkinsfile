@@ -63,7 +63,10 @@ pipeline {
         stage('Deploy to Kubernetes') {
             steps {
                 sh '''
+                export KUBECONFIG=/var/jenkins_home/.kube/config
+
                 helm upgrade my-app ./devops-saas \
+                --insecure-skip-tls-verify \
                 --set auth.image=$ECR_URL/auth-service:${IMAGE_TAG} \
                 --set user.image=$ECR_URL/user-service:${IMAGE_TAG} \
                 --set order.image=$ECR_URL/order-service:${IMAGE_TAG} \
