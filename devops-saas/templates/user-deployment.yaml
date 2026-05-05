@@ -15,6 +15,6 @@ spec:
       containers:
       - name: user-service
         image: {{ .Values.user.image }}
-        imagePullPolicy: Never
+        imagePullPolicy: Always
         ports:
         - containerPort: 3002
